@@ -6,15 +6,24 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>Restaurant Survey Completer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="Automatic Restaurant Survey Completer" />
         <p className="description">
-          Get started by editing this document here<code>pages/index.js</code>
+          Welcome. Please fill out the information below.
         </p>
+        <form name="survey" method="POST" data-netlify="true">
+          <p>
+            <label>Restaurant: <select name="restaurant[]" multiple>
+              <option value="panda">Panda</option>
+              <option value="mcd">McDonald's</option>
+            </select>
+            </label>
+          </p>
+        </form>
       </main>
 
       <Footer />
